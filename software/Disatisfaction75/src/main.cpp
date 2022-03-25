@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <Keypad.h>
-
+#include <HID-Project.h>
  
 
 
@@ -13,11 +13,16 @@
 
   char keys[ROWS][COLS]={
 
-{'27','112','113','114','115','116','117','118','119','120','121','122','123','0',},
-{'113','119','101','114','116','121','117','105','111','112','91','','','',},
+{'KEY_ESC','KEY_F1','KEY_F2','KEY_F3','KEY_F4','KEY_F5','KEY_F6','KEY_F7','KEY_F8','KEY_F9','KEY_F10','KEY_F11','KEY_F12','KEY_NONE',},
+
+{'KEY_GRAVE','KEY_1','KEY_2','KEY_3','KEY_4','KEY_5','KEY_6','KEY_7','KEY_8','KEY_9','KEY_0','KEY_MINUS','KEY_EQUAL','KEY_BACKSPACE',},
+
+{'KEY_TAB','KEY_Q','KEY_W','KEY_E','KEY_R','KEY_T','KEY_Y','KEY_U','KEY_I','KEY_O','KEY_P','KEY_LEFTBRACE','KEY_RIGHTBRACE','KEY_BACKSLASH',},
+
+{'KEY_CAPSLOCK','KEY_A','KEY_S','KEY_D','KEY_F','KEY_G','KEY_H','KEY_J','KEY_K','KEY_L','KEY_SEMICOLON','KEY_APOSTROPHE','KEY_ENTER','KEY_DELETE',},
+
 {'','','','','','','','','','','','','','',},
-{'','','','','','','','','','','','','','',},
-{'','','','','','','','','','','','','','',},
+
 {'','','','','','','','','','','','','','',}
  
 };
@@ -65,8 +70,8 @@ void setup() {
 
 
 // setting the debounce and repeat times(milliseconds)
-Disatisfaction.setHoldTime(800);// time untill the keypress is repeated
-Disatisfaction.setDebounceTime(10);// time untill new keypresses are accepted
+//Disatisfaction.setHoldTime(800);// time untill the keypress is repeated
+//Disatisfaction.setDebounceTime(10);// time untill new keypresses are accepted
 
 
 }
@@ -85,7 +90,7 @@ void loop()
 void scanMatrix() {
  char key = Disatisfaction.getKey();
  
- if(key)
+ 
 
 
 
