@@ -21,7 +21,7 @@
 
 {'KEY_CAPSLOCK','KEY_A','KEY_S','KEY_D','KEY_F','KEY_G','KEY_H','KEY_J','KEY_K','KEY_L','KEY_SEMICOLON','KEY_APOSTROPHE','KEY_ENTER','KEY_DELETE',},
 
-{'','','','','','','','','','','','','','',},
+{'KEY_MOD_LSHIFT','KEY_Z','KEY_X','KEY_C','KEY_V','KEY_B','','','','','','','','',},
 
 {'','','','','','','','','','','','','','',}
  
